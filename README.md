@@ -12,7 +12,7 @@ weather where you need it...on the command line
 - `bundle install`
 - (OPTIONAL) create a dotfile for tundra:
   - `touch ~/.tundra`
-  - 
+  - add contents to file
     ```bash
     echo "{
       "location": "Oakland",
