@@ -8,9 +8,15 @@ weather where you need it...on the command line
 
 ### setup
 - `git clone git@github.com:dasmoose/tundra.git`
+- `cd tundra`
+- `bundle install`
 - (OPTIONAL) create a dotfile for tundra:
   - `touch ~/.tundra`
-  - `echo "{ "location": "Oakland", "api_key": "1234567890abcdef", "temp_unit": "F" }" >> ~/.tundra`
+  - `echo "{
+      "location": "Oakland",
+      "api_key": "1234567890abcdef",
+      "temp_unit": "F"
+    }" >> ~/.tundra`
 
 ### dotfile
 You can create a json dotfile in your home directory that specifies a few pieces of info:
