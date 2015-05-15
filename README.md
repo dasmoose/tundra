@@ -17,7 +17,7 @@ weather where you need it...on the command line
       "location": "Oakland",
       "api_key": "1234567890abcdef",
       "temp_unit": "F"
-    }" >> ~/.tundra`
+    }" >> ~/.tundra
     ```
 
 ### dotfile
