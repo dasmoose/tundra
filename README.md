@@ -12,11 +12,13 @@ weather where you need it...on the command line
 - `bundle install`
 - (OPTIONAL) create a dotfile for tundra:
   - `touch ~/.tundra`
-  - `echo "{
+  - ```bash
+    echo "{
       "location": "Oakland",
       "api_key": "1234567890abcdef",
       "temp_unit": "F"
     }" >> ~/.tundra`
+    ```
 
 ### dotfile
 You can create a json dotfile in your home directory that specifies a few pieces of info:
