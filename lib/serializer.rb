@@ -1,9 +1,10 @@
+require 'hashie'
 require 'json'
 
 # Adapted from @cknadler's git-feats gem. 
 
 module Tundra
-module Serializer
+  module Serializer
     
     extend self
 
@@ -23,18 +24,22 @@ module Serializer
       end
     end
 
-    # unserialize a json file to a ruby object
+    # Deserialize a json file to a ruby object.
+    # If no file exists at `path`, this will return silently
     #
     # path - file path
     #
-    # Returns a ruby object or nil
-    def unserialize(path)
-      if File.exists?(path) && !File.zero?(path)
+    # Returns a Hashie::Mash object
+    def deserialize(path)
+      # Read file if it exists and is not empty
+      if File.exist?(path) && !File.zero?(path)
         begin
-          return JSON.parse(IO.binread(path))
+          parsed = JSON.parse(IO.read(path))
+          return Hashie::Mash.new parsed
         rescue JSON::ParserError => e
           puts e
         end
       end 
     end
+  end
 end
