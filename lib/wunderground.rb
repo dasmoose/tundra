@@ -10,8 +10,8 @@ module Tundra
 
 		end
 
-		# Request forcast
-		def get_forcast
+		# Request forecast
+		def get_forecast
 
 		end
 
