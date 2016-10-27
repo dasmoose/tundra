@@ -81,15 +81,11 @@ module Tundra
       end
     end
 
-    def print_weather(file)
-      weather_str = "#{@current_temp} F #{@description}"
-      if !@error && !file
-        puts weather_str
-      elsif !@error
-        f = File.new(file,"w")
-        f.puts weather_str
-        f.close
-        `cp ~/icons/#{icon}.png ~/icons/current.png`
+    def print_weather
+      if @error
+        puts "Error requesting the moon phase. Try again later."
+      else
+        puts "#{@current_temp} F #{@description}"
       end
     end
 

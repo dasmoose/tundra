@@ -12,7 +12,6 @@ module Tundra
       # setup cli options parser
       opts = Trollop::options do
         opt :location, "Weather for location", :type => String
-        opt :export, "File to write ", :type => String
         opt :forecast, "Forecast for number of days specified (up to 10 days).", :type => Integer
         opt :moon, "Shows the current moon percentage."
       end
@@ -41,7 +40,7 @@ module Tundra
 
         if !opts[:moon] && !opts[:forecast]
           weather.find_weather
-          weather.print_weather(opts[:export])
+          weather.print_weather()
         end
 
       else
